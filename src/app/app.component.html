@@ -1,0 +1,13 @@
+<mat-toolbar id="top-bar" class="mat-elevation-z6" color="primary">
+  <a id="logo" routerLink="/">
+    <img width="180" alt="Maqemo Logo" src="../assets/maqemo-logo.png">
+  </a>
+  <mat-nav-list fxLayout="row" fxLayoutAlign="space-between center">
+    <a mat-list-item routerLink="/about">About</a>
+    <a mat-list-item routerLink="/contact">Contact</a>
+  </mat-nav-list>
+</mat-toolbar>
+
+<div class="page-shell">
+  <router-outlet></router-outlet>
+</div>

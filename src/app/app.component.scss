@@ -1,0 +1,16 @@
+#top-bar {
+    //background-color: rgba(0, 0, 0, 0.37);
+    //line-height: 30px;
+    &.mat-elevation-z6 {
+      position: relative;
+      z-index: 2;
+    }
+    #logo {
+        padding-top: 15px;
+        padding-right: 15px;
+    }
+}
+
+.page-shell {
+    padding: 25px;
+}

@@ -1,0 +1,5 @@
+@import '../../../sass/theming.scss';
+
+.mat-card {
+    background-color: mat-color($maqemo-app-primary);
+}
