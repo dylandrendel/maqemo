@@ -1,13 +1,22 @@
-<mat-toolbar id="top-bar" class="mat-elevation-z6" color="primary">
-  <a id="logo" routerLink="/">
-    <img width="180" alt="Maqemo Logo" src="../assets/maqemo-logo.png">
-  </a>
-  <mat-nav-list fxLayout="row" fxLayoutAlign="space-between center">
-    <a mat-list-item routerLink="/about">About</a>
-    <a mat-list-item routerLink="/contact">Contact</a>
-  </mat-nav-list>
-</mat-toolbar>
-
-<div class="page-shell">
+<div class="mat-elevation-z6 top-bar padding-top" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <a id="logo" routerLink="/">
+      <img width="180" alt="Maqemo Logo" src="../assets/maqemo-logo.png">
+    </a>
+  <!-- <mat-nav-list fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <a mat-list-item routerLink="/">
+      <p style="text-align: center">
+      DYLAN <br />
+      DRENDEL
+    </p>
+    </a>
+  </mat-nav-list> -->
+  <nav mat-tab-nav-bar fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <a mat-tab-link routerLink="/music" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">music</a>
+    <a mat-tab-link routerLink="/videos"routerLinkActive #rlb="routerLinkActive" [active]="rlb.isActive">videos</a>
+    <a mat-tab-link routerLink="/about" routerLinkActive #rlc="routerLinkActive" [active]="rlc.isActive">about</a>
+    <a mat-tab-link routerLink="/contact" routerLinkActive #rld="routerLinkActive" [active]="rld.isActive">contact</a>
+  </nav>
+</div>
+<div class="page-shell mat-dark-theme" ngClass.lt-sm="shorter">
   <router-outlet></router-outlet>
 </div>

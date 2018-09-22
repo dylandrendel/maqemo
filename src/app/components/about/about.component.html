@@ -1,18 +1,22 @@
-<mat-card fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="100px">
-  <img src="../../../assets/wildflowers.jpg" alt="flowers" height="500" width="500">
-  <div fxFlex> 
-    <p>
-      Site designed and built from scratch by Dylan. See <a routerLink="/contact">here</a> for more information.
-    </p>
-    <p>
-      Some of my interests in no specific order: rock climbing, sustainability/self-sufficiency, traveling cheaply through work exchange, alternative construction techniques, meditation, whole foods plant based diet and health, cooking, making music, photography, videography, graphic design, writing, permaculture design, mental health, fire science and forest restoration/management, trail work, coding, backpacking, hiking, horticulture.
-    </p>
-  </div>
-</mat-card>
-<mat-card fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="100px">
-    <div fxFlex> 
-        <p>Relax. Take a seat and have a look around. There's lots to learn here on Maqemo.</p>
-      </div>
-    <img src="../../../assets/ocean_bench.jpg" alt="flowers" height="500" width="750">
-    
+<mat-card class="wrapper mat-light-theme" fxLayout="column" fxLayoutGap="20px">
+  <mat-card fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center" fxLayoutGap="100px" fxLayoutGap.lt-md="20px">
+    <img src="../../../assets/wildflowers.jpg" fxFlexFill fxFlex="50" fxFlex.lt-md="33">
+    <div fxFlex="50">
+      <p>
+        Site designed and built from scratch by Dylan. See <a routerLink="/contact">here</a> for more information.
+      </p>
+      <p>
+        Some of my interests in no specific order: rock climbing, sustainability/self-sufficiency, traveling cheaply
+        through work exchange, alternative construction techniques, meditation, whole foods plant based diet and
+        health, cooking, making music, photography, videography, graphic design, writing, permaculture design, mental
+        health, fire science and forest restoration/management, trail work, coding, backpacking, hiking, horticulture.
+      </p>
+    </div>
   </mat-card>
+  <mat-card fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between center" fxLayoutGap="100px" fxLayoutGap.lt-md="20px">
+    <div fxFlex="50">
+      <p>Relax. Take a seat and have a look around. There's lots to learn here on Maqemo.</p>
+    </div>
+    <img src="../../../assets/ocean_bench.jpg" fxFlexFill fxFlex="50">
+  </mat-card>
+</mat-card>

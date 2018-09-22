@@ -1,16 +1,21 @@
-#top-bar {
-    //background-color: rgba(0, 0, 0, 0.37);
-    //line-height: 30px;
-    &.mat-elevation-z6 {
-      position: relative;
-      z-index: 2;
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+    &.padding-top {
+      padding-top: 5px;
     }
-    #logo {
-        padding-top: 15px;
-        padding-right: 15px;
-    }
-}
+  }
 
 .page-shell {
-    padding: 25px;
+  padding: 25px;
+  margin-top: 64px;
+  //height: calc(100vh - 105px);
+  //overflow: auto;
+  &.shorter {
+    margin-top: 100px;
+  }
 }
