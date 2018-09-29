@@ -1,8 +1,9 @@
-<div class="mat-elevation-z6 top-bar padding-top" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
+<div class="site-wrapper" fxLayout="column" fxLayoutAlign="space-between stretch">
+  <div fxFlex="0 0 auto" class="mat-elevation-z6 top-bar padding-top" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px">
     <a id="logo" routerLink="/">
       <img width="180" alt="Maqemo Logo" src="../assets/maqemo-logo.png">
     </a>
-  <!-- <mat-nav-list fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+    <!-- <mat-nav-list fxLayout="row wrap" fxLayoutAlign="space-evenly center">
     <a mat-list-item routerLink="/">
       <p style="text-align: center">
       DYLAN <br />
@@ -10,13 +11,19 @@
     </p>
     </a>
   </mat-nav-list> -->
-  <nav mat-tab-nav-bar fxLayout="row wrap" fxLayoutAlign="space-evenly center">
-    <a mat-tab-link routerLink="/music" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">music</a>
-    <a mat-tab-link routerLink="/videos"routerLinkActive #rlb="routerLinkActive" [active]="rlb.isActive">videos</a>
-    <a mat-tab-link routerLink="/about" routerLinkActive #rlc="routerLinkActive" [active]="rlc.isActive">about</a>
-    <a mat-tab-link routerLink="/contact" routerLinkActive #rld="routerLinkActive" [active]="rld.isActive">contact</a>
-  </nav>
-</div>
-<div class="page-shell mat-dark-theme" ngClass.lt-sm="shorter">
-  <router-outlet></router-outlet>
+    <nav mat-tab-nav-bar fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+      <!-- <a mat-tab-link routerLink="/music" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">music</a>
+      <a mat-tab-link routerLink="/videos" routerLinkActive #rlb="routerLinkActive" [active]="rlb.isActive">videos</a> -->
+      <a mat-tab-link routerLink="/about" routerLinkActive #rlc="routerLinkActive" [active]="rlc.isActive">about</a>
+      <a mat-tab-link routerLink="/contact" routerLinkActive #rld="routerLinkActive" [active]="rld.isActive">contact</a>
+    </nav>
+  </div>
+  <div class="page-shell" ngClass.lt-sm="shorter">
+    <router-outlet></router-outlet>
+  </div>
+  <span fxFlex="1 1 auto" class="fill"></span>
+  <div fxFlex="0 0 60px" class="bottom-bar" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="15px">
+    <a href="https://www.linkedin.com/in/dylandrendel" class="fa fa-linkedin"></a>
+    <a href="https://www.github.com/dylandrendel" class="fa fa-github"></a>
+  </div>
 </div>

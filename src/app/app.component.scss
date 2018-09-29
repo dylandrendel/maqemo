@@ -1,21 +1,52 @@
+@import '~@angular/material/theming';
+
+.site-wrapper {
+  height: 100vh;
+}
+
 .top-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    background-color: white;
-    &.padding-top {
-      padding-top: 5px;
-    }
+  z-index: 999;
+  background-color: white;
+
+  &.padding-top {
+    padding-top: 5px;
   }
+}
 
 .page-shell {
   padding: 25px;
-  margin-top: 64px;
-  //height: calc(100vh - 105px);
-  //overflow: auto;
-  &.shorter {
-    margin-top: 100px;
+  background-color: #00460544;
+}
+
+.fill {
+  background-color: #00460544;
+}
+
+.bottom-bar {
+  background-color: #00460544;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: grey;
+  background-color: white;
+  @include mat-elevation-transition;
+  @include mat-elevation(2);
+
+  &:active,
+  &:hover {
+    @include mat-elevation(8);
+  }
+} 
+
+.mat-tab-link {
+  &.active,
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.192);
   }
 }
