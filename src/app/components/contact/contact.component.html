@@ -26,12 +26,12 @@
         </mat-list>
       </mat-card>
       <mat-card>
-        <form fxLayout="column" fxLayoutAlign="space-between stretch" name="contact" method="POST" netlify action="/contact">
+        <form fxLayout="column" fxLayoutAlign="space-between stretch" name="contact" method="POST" action="/" netlify>
           <mat-form-field>
-            <input matInput placeholder="Your email" type="text" name="name">
+            <input matInput placeholder="Your name" type="text" name="name">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Your name" type="email" name="email">
+            <input matInput placeholder="Your email" type="email" name="email">
           </mat-form-field>
           <mat-form-field>
             <mat-select placeholder="Reason for contacting" name="reason[]" multiple>
