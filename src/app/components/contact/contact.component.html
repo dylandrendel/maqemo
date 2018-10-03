@@ -1,19 +1,51 @@
 <div class="wrapper">
-  <mat-card fxLayout="row wrap" fxLayoutAlign="space-between center" fxLayout.lt-md="column" fxLayoutAlign.lt-md="space-between center">
-    <mat-list fxFlex="50">
-      <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
-        <mat-icon matListIcon>person</mat-icon>
-        <p matLine>Dylan Drendel</p>
-      </mat-list-item>
-      <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
-        <mat-icon matListIcon>email</mat-icon>
-        <p matLine>dylan.drendel@gmail.com</p>
-      </mat-list-item>
-      <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
-        <mat-icon matListIcon>phone</mat-icon>
-        <p matLine>720-934-9305</p>
-      </mat-list-item>
-    </mat-list>
-    <img src="../../../assets/dylan.jpeg" height="100%" width="100%" fxFlex="50" fxFlex.lt-md="100">
+  <mat-card fxLayout="row wrap" fxLayoutAlign="space-between start" fxLayout.lt-md="column" fxLayoutGap="20px"
+    fxLayoutAlign.lt-md="space-between stretch">
+    <mat-card fxFlex="50" fxLayout="column" fxLayoutAlign="start stretch">
+      <p style="font-size: 1.5rem">Thanks for checking out my site!</p>
+      <p>
+        You can reach me by email, phone, or the form on this page. I look forward to hearing from you!
+      </p>
+      <img src="../../../assets/dylan.jpeg" height="100%" width="100%" fxFlex="50" fxFlex.lt-md="100">
+    </mat-card>
+    <div fxLayout="column" fxFlex="1 1 auto" fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
+      <mat-card>
+        <mat-list>
+          <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+            <mat-icon matListIcon color="accent">person</mat-icon>
+            <p matLine>Dylan Drendel</p>
+          </mat-list-item>
+          <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+            <mat-icon matListIcon color="accent">email</mat-icon>
+            <p matLine>dylan.drendel@gmail.com</p>
+          </mat-list-item>
+          <mat-list-item fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="15px">
+            <mat-icon matListIcon color="accent">phone</mat-icon>
+            <p matLine>720-934-9305</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-card>
+      <mat-card>
+        <form fxLayout="column" fxLayoutAlign="space-between stretch" name="contact" method="POST" netlify action="/contact">
+          <mat-form-field>
+            <input matInput placeholder="Your email" type="text" name="name">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Your name" type="email" name="email">
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select placeholder="Reason for contacting" name="reason[]" multiple>
+              <mat-option value="design">Design Services</mat-option>
+              <mat-option value="collaboration">Collaboration</mat-option>
+              <mat-option value="chat">Just to Chat :)</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Your message" matTextareaAutosize="true" matAutosizeMinRows="3" name="message"></textarea>
+          </mat-form-field>
+          <button mat-button color="primary" type="submit" (click)="openSnackBar('Message Sent! Thank you.','Close')">Send</button>
+        </form>
+      </mat-card>
+    </div>
   </mat-card>
 </div>
